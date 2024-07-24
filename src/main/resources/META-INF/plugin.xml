@@ -2,17 +2,19 @@
 <idea-plugin>
     <id>com.github.yazdipour.jetplugin</id>
     <name>jet-plugin</name>
-    <vendor>yazdipour</vendor>
+    <vendor email="git@yazdipour.com">yazdipour</vendor>
+    <description>A demo plugin to gather user feedback on images</description>
 
     <depends>com.intellij.modules.platform</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.yazdipour.jetplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.github.yazdipour.jetplugin.toolWindow.MyToolWindowFactory"
+                    id="MyToolWindow"
+                    secondary="true"
+                    icon="AllIcons.General.Modified"
+                    anchor="right"
+        />
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.yazdipour.jetplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>
